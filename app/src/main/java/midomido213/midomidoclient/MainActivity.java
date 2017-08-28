@@ -5,20 +5,18 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import com.loopj.android.image.SmartImageView;
+
 import java.util.List;
 
-import twitter4j.ResponseList;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -66,6 +64,8 @@ public class MainActivity extends ListActivity {
             screenName.setText("@" + item.getUser().getScreenName());
             TextView text = (TextView) convertView.findViewById(R.id.text);
             text.setText(item.getText());
+            SmartImageView icon = (SmartImageView) convertView.findViewById(R.id.icon);
+            icon.setImageUrl(item.getUser().getProfileImageURL());
             return convertView;
         }
     }
