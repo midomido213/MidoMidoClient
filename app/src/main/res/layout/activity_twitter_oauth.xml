@@ -12,6 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/twitter_oauth" />
+        android:text="@string/twitter_oauth"
+        tools:layout_editor_absoluteY="231dp"
+        tools:layout_editor_absoluteX="131dp" />
 
 </android.support.constraint.ConstraintLayout>
